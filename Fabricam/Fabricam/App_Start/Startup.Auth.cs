@@ -11,7 +11,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Owin;
-using Fabricam.Models;
+using FabricamContactsDataAccess;
 
 namespace Fabricam
 {
@@ -30,7 +30,7 @@ namespace Fabricam
 
         public void ConfigureAuth(IAppBuilder app)
         {
-            ApplicationDbContext db = new ApplicationDbContext();
+            FabricamContactsDbContext db = new FabricamContactsDbContext();
 
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 

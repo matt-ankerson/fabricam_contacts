@@ -11,14 +11,14 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
-using Fabricam.Models;
+using FabricamContactsDataAccess;
 
 namespace Fabricam.Controllers
 {
     [Authorize]
     public class UserProfileController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private FabricamContactsDbContext db = new FabricamContactsDbContext();
         private string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
         private string appKey = ConfigurationManager.AppSettings["ida:ClientSecret"];
         private string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];

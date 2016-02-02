@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fabricam\Fabricam.csproj">
+    <ProjectReference Include="..\Fabricam\FabricamContactsPresentation.csproj">
       <Project>{C608FC64-FB90-4389-AF2B-2691E93A286B}</Project>
-      <Name>Fabricam</Name>
+      <Name>FabricamContactsPresentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
