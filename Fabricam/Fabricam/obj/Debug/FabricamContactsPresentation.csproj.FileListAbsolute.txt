@@ -1,6 +1,3 @@
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\FabricamContactsPresentation.csprojResolveAssemblyReference.cache
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\ApplicationInsights.config
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\roslyn\csc.exe
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -119,3 +116,6 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\ru\System.Spatial.resources.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\FabricamContactsPresentation.csprojResolveAssemblyReference.cache
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.pdb
