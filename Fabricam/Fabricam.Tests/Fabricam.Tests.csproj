@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -40,6 +48,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Extensions" />
@@ -82,6 +91,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\CreateContactUtilitiesTest.cs" />
+    <Compile Include="BusinessLogic\ImageBytesConverterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
@@ -92,6 +103,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FabricamContactsBusinessLogic\FabricamContactsBusinessLogic.csproj">
+      <Project>{e1395f03-6c5f-468c-b2d6-3006b26a3710}</Project>
+      <Name>FabricamContactsBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FabricamContactsDataAccess\FabricamContactsDataAccess.csproj">
+      <Project>{0e36fd9d-9817-4a19-84a8-95d866be3f69}</Project>
+      <Name>FabricamContactsDataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fabricam\FabricamContactsPresentation.csproj">
       <Project>{C608FC64-FB90-4389-AF2B-2691E93A286B}</Project>
       <Name>FabricamContactsPresentation</Name>

@@ -51,8 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreateContactUtilities.cs" />
-    <Compile Include="ImageConverter.cs" />
+    <Compile Include="ImageBytesConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadContactsUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FabricamContactsDataAccess\FabricamContactsDataAccess.csproj">

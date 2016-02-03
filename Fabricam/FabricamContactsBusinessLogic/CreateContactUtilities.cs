@@ -54,13 +54,13 @@ namespace FabricamContactsBusinessLogic
                 {
                     // Use anonymous image
                     Image anonymousImage = Image.FromFile("Images/anon-user.png");
-                    byte[] anonymousBytes = ImageConverter.ConvertImageToBytes(anonymousImage);
+                    byte[] anonymousBytes = ImageBytesConverter.ConvertImageToBytes(anonymousImage);
                     newContact.Picture = anonymousBytes;
                 }
                 else
                 {
                     // Use provided image
-                    byte[] imageBytes = ImageConverter.ConvertImageToBytes(picture);
+                    byte[] imageBytes = ImageBytesConverter.ConvertImageToBytes(picture);
                     newContact.Picture = imageBytes;
                 }
 
@@ -70,6 +70,12 @@ namespace FabricamContactsBusinessLogic
                     context.Contacts.Add(newContact);
                     context.SaveChanges();
                 }
+
+                // Was a manager supplied?
+                if (managerId != null)
+                {
+                    createContactHasManager(managerId.Value, newContact.ContactId);
+                }
             }
             catch (Exception)
             {
@@ -77,6 +83,26 @@ namespace FabricamContactsBusinessLogic
             }
 
             return contactCreated;
+        }
+
+        /// <summary>
+        /// Insert a new manager/worker relationship
+        /// </summary>
+        /// <param name="managerId"></param>
+        /// <param name="workerId"></param>
+        private static void createContactHasManager(int managerId, int workerId)
+        {
+            using (var context = new FabricamContactsDbContext())
+            {
+                ContactHasManager contactHasManager = new ContactHasManager
+                {
+                    ManagerContactId = managerId,
+                    WorkerContactId = workerId
+                };
+
+                context.ContactHasManagers.Add(contactHasManager);
+                context.SaveChanges();
+            }
         }
     }
 }

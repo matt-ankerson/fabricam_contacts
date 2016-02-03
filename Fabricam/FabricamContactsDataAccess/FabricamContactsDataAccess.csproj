@@ -85,6 +85,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
@@ -98,6 +99,7 @@
     <Compile Include="AdalTokenCache.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactHasManager.cs" />
+    <Compile Include="DropCreateFabricamContactsAlways.cs" />
     <Compile Include="FabricamContactsDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserTokenCache.cs" />
