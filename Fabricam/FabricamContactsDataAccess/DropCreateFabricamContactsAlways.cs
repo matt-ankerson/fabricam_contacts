@@ -35,6 +35,12 @@ namespace FabricamContactsDataAccess
             relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 3 });
             relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 4 });
             relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 5 });
+
+            foreach (var contactHasManager in relationships)
+            {
+                dbContext.ContactHasManagers.Add(contactHasManager);
+            }
+            dbContext.SaveChanges();
         }
 
         private void populateContacts()
