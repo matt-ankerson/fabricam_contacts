@@ -14,6 +14,8 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Fabricam.Tests.dll.config
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Fabricam.Tests.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Fabricam.Tests.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Fabricam.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\FabricamContactsBusinessLogic.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\FabricamContactsDataAccess.dll
@@ -26,7 +28,6 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Owin.dll
@@ -45,6 +46,8 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\FabricamContactsBusinessLogic.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\FabricamContactsDataAccess.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Fabricam.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.Helpers.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.Mvc.xml
@@ -52,7 +55,6 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Microsoft.Owin.Security.OpenIdConnect.xml
@@ -105,5 +107,3 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.pdb
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\EntityFramework.SqlServer.xml

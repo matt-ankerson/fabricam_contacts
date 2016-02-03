@@ -17,6 +17,7 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Antlr3.Runtime.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\EntityFramework.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\EntityFramework.SqlServer.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsDataAccess.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.AI.DependencyCollector.dll
@@ -50,6 +51,7 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.WebPages.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.WebPages.Razor.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\WebGrease.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsDataAccess.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -119,5 +121,3 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\FabricamContactsPresentation.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.pdb
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.pdb
