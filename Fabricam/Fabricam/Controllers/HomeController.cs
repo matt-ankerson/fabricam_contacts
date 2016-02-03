@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FabricamContactsBusinessLogic;
+using FabricamContactsDataAccess;
 
 namespace Fabricam.Controllers
 {
@@ -11,7 +13,9 @@ namespace Fabricam.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            // Get all contacts
+            List<Contact> contacts = ReadContactsUtilities.GetAllContacts();
+            return View(contacts);
         }
 
         public ActionResult About()

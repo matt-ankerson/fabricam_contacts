@@ -119,3 +119,5 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\FabricamContactsPresentation.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.pdb
