@@ -8,11 +8,11 @@ namespace FabricamContactsDataAccess
 {
     public interface IContactHasManagerRepository : IDisposable
     {
-        IEnumerable<ContactHasManager> GetContactHasManagers();
-        ContactHasManager GetContactHasManagerById(int contactHasManagerId);
-        void InsertContactHasManager(ContactHasManager contactHasManager);
+        IEnumerable<ContactManagerRelationship> GetContactHasManagers();
+        ContactManagerRelationship GetContactHasManagerById(int contactHasManagerId);
+        void InsertContactHasManager(ContactManagerRelationship contactManagerRelationship);
         void DeleteContactHasManager(int contactHasManagerId);
-        void UpdateContactHasManager(ContactHasManager contactHasManager);
+        void UpdateContactHasManager(ContactManagerRelationship contactManagerRelationship);
         void Save();
     }
 }

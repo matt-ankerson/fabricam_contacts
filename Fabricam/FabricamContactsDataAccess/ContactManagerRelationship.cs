@@ -10,9 +10,9 @@ namespace FabricamContactsDataAccess
     /// Facilitates the zero-to-many relationship between contacts. 
     /// (ie. Some contacts are managers of other contacts)
     /// </summary>
-    public class ContactHasManager
+    public class ContactManagerRelationship
     {
-        public int ContactHasManagerId { get; set; }
+        public int ContactManagerRelationshipId { get; set; }
         public int ManagerContactId { get; set; }
         public int WorkerContactId { get; set; }
 

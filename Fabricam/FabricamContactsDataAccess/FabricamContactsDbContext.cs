@@ -17,7 +17,7 @@ namespace FabricamContactsDataAccess
 
         public DbSet<UserTokenCache> UserTokenCacheList { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<ContactHasManager> ContactHasManagers { get; set; }
+        public DbSet<ContactManagerRelationship> ContactManagerRelationships { get; set; }
     }
 
     

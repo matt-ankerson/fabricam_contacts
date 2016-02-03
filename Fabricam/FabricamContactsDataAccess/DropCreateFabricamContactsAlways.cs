@@ -29,16 +29,16 @@ namespace FabricamContactsDataAccess
 
         private void populateContactHasManagers()
         {
-            List<ContactHasManager> relationships = new List<ContactHasManager>();
+            List<ContactManagerRelationship> relationships = new List<ContactManagerRelationship>();
 
-            relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 2});
-            relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 3 });
-            relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 4 });
-            relationships.Add(new ContactHasManager { ManagerContactId = 1, WorkerContactId = 5 });
+            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 2});
+            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 3 });
+            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 4 });
+            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 5 });
 
             foreach (var contactHasManager in relationships)
             {
-                dbContext.ContactHasManagers.Add(contactHasManager);
+                dbContext.ContactManagerRelationships.Add(contactHasManager);
             }
             dbContext.SaveChanges();
         }

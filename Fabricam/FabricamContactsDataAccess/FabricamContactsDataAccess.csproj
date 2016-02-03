@@ -98,8 +98,8 @@
   <ItemGroup>
     <Compile Include="AdalTokenCache.cs" />
     <Compile Include="Contact.cs" />
-    <Compile Include="ContactHasManager.cs" />
-    <Compile Include="ContactHasManagerRepository.cs" />
+    <Compile Include="ContactManagerRelationship.cs" />
+    <Compile Include="ContactManagerRelationshipRepository.cs" />
     <Compile Include="ContactRepository.cs" />
     <Compile Include="DropCreateFabricamContactsAlways.cs" />
     <Compile Include="FabricamContactsDbContext.cs" />

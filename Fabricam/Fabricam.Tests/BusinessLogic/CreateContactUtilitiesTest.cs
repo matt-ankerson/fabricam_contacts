@@ -17,11 +17,12 @@ namespace Fabricam.Tests.BusinessLogic
         public void TestContactCreatedHasManager()
         {
             // Arrange
+            ContactUtilities contactUtilities = new ContactUtilities();
 
             // Act
-            CreateContactUtilities.CreateContact("Nigel", "Holmes", "nigelholmes@gmail.com", "123456", "Contoso",
+            contactUtilities.CreateContact("Nigel", "Holmes", "nigelholmes@gmail.com", "123456", "Contoso",
                 "Developer", DateTime.Today, DateTime.Today);
-            CreateContactUtilities.CreateContact("Frank", "Hue", "frankhue@gmail.com", "123456", "Contoso",
+            contactUtilities.CreateContact("Frank", "Hue", "frankhue@gmail.com", "123456", "Contoso",
                 "Grad Developer", DateTime.Today, DateTime.Today, null, 1);  
 
             // Assert

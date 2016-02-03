@@ -11,10 +11,17 @@ namespace Fabricam.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+        private ContactUtilities contactUtilities;
+
+        public HomeController()
+        {
+            contactUtilities = new ContactUtilities();
+        }
+
         public ActionResult Index()
         {
             // Get all contacts
-            List<Contact> contacts = ReadContactsUtilities.GetAllContacts();
+            List<Contact> contacts = contactUtilities.GetAllContacts();
             return View(contacts);
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,6 @@ namespace FabricamContactsDataAccess
         public DateTime DateOfBirth { get; set; }
         public DateTime JoinDate { get; set; }
 
-        public virtual List<ContactHasManager> DirectWorkers { get; set; }
+        public virtual List<ContactManagerRelationship> DirectWorkers { get; set; }
     }
 }
