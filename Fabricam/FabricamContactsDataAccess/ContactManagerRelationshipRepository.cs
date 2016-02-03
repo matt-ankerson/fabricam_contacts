@@ -10,7 +10,7 @@ namespace FabricamContactsDataAccess
     /// <summary>
     /// Repository pattern for facilitating access to the data.
     /// </summary>
-    public class ContactManagerRelationshipRepository
+    public class ContactManagerRelationshipRepository : IContactManagerRelationshipRepository
     {
         private FabricamContactsDbContext context;
         private bool disposed = false;

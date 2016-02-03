@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactManagerRelationshipUtilities.cs" />
     <Compile Include="ContactUtilities.cs" />
     <Compile Include="ImageBytesConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

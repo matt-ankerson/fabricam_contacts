@@ -27,3 +27,4 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamCo
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Newtonsoft.Json.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.csprojResolveAssemblyReference.cache

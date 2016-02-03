@@ -103,7 +103,7 @@
     <Compile Include="ContactRepository.cs" />
     <Compile Include="DropCreateFabricamContactsAlways.cs" />
     <Compile Include="FabricamContactsDbContext.cs" />
-    <Compile Include="IContactHasManagerRepository.cs" />
+    <Compile Include="IContactManagerRelationshipRepository.cs" />
     <Compile Include="IContactRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserTokenCache.cs" />

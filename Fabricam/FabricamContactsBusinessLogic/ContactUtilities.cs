@@ -10,7 +10,7 @@ using FabricamContactsDataAccess;
 namespace FabricamContactsBusinessLogic
 {
     /// <summary>
-    /// Provides utilities for creating new contacts.
+    /// Provides utilities for contacts in the database.
     /// </summary>
     public class ContactUtilities
     {
@@ -57,9 +57,8 @@ namespace FabricamContactsBusinessLogic
         /// <param name="dateOfBirth"></param>
         /// <param name="dateJoined"></param>
         /// <param name="picture">Picture to store in database.</param>
-        /// <param name="managerId">If included, this indicates the direct manager for the new contact.</param>
         public bool CreateContact(string firstName, string lastName, string email, string phone, string organisation,
-            string title, DateTime dateOfBirth, DateTime dateJoined, Image picture = null, int? managerId = null)
+            string title, DateTime dateOfBirth, DateTime dateJoined, Image picture = null)
         {
             bool contactCreated = true;
 
@@ -74,8 +73,7 @@ namespace FabricamContactsBusinessLogic
                     Organisation = organisation,
                     Title = title,
                     DateOfBirth = dateOfBirth,
-                    JoinDate = dateJoined,
-                    ManagerId = managerId
+                    JoinDate = dateJoined
                 };
 
                 if (picture == null)
@@ -95,12 +93,6 @@ namespace FabricamContactsBusinessLogic
                 // Save
                 contactRepository.InsertContact(newContact);
                 contactRepository.Save();
-
-                // Was a manager supplied?
-                if (managerId != null)
-                {
-                    CreateContactManagerRelationship(managerId.Value, newContact.ContactId);
-                }
             }
             catch (Exception)
             {
@@ -110,20 +102,6 @@ namespace FabricamContactsBusinessLogic
             return contactCreated;
         }
 
-        /// <summary>
-        /// Insert a new manager/worker relationship
-        /// </summary>
-        /// <param name="managerId"></param>
-        /// <param name="workerId"></param>
-        public void CreateContactManagerRelationship(int managerId, int workerId)
-        {
-            ContactManagerRelationship contactManagerRelationship = new ContactManagerRelationship
-            {
-                ManagerContactId = managerId,
-                WorkerContactId = workerId
-            };
-
-            
-        }
+        
     }
 }
