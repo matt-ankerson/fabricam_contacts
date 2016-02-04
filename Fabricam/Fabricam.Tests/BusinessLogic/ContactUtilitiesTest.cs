@@ -7,11 +7,13 @@ using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FabricamContactsBusinessLogic;
 using FabricamContactsDataAccess;
+using Moq;
+using Moq.Matchers;
 
 namespace Fabricam.Tests.BusinessLogic
 {
     [TestClass]
-    public class CreateContactUtilitiesTest
+    public class ContactUtilitiesTest
     {
         [TestMethod]
         public void TestContactCreatedHasManager()
@@ -23,7 +25,7 @@ namespace Fabricam.Tests.BusinessLogic
             contactUtilities.CreateContact("Nigel", "Holmes", "nigelholmes@gmail.com", "123456", "Contoso",
                 "Developer", DateTime.Today, DateTime.Today);
             contactUtilities.CreateContact("Frank", "Hue", "frankhue@gmail.com", "123456", "Contoso",
-                "Grad Developer", DateTime.Today, DateTime.Today, null);  
+                "Grad Developer", DateTime.Today, DateTime.Today);  
 
             // Assert
             Assert.IsTrue(true);

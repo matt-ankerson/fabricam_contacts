@@ -23,27 +23,11 @@ namespace FabricamContactsDataAccess
             base.Seed(context);
 
             // Populate tables
-            populateContacts();
-            populateContactHasManagers();
+            PopulateContacts();
         }
 
-        private void populateContactHasManagers()
-        {
-            List<ContactManagerRelationship> relationships = new List<ContactManagerRelationship>();
 
-            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 2});
-            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 3 });
-            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 4 });
-            relationships.Add(new ContactManagerRelationship { ManagerContactId = 1, WorkerContactId = 5 });
-
-            foreach (var contactHasManager in relationships)
-            {
-                dbContext.ContactManagerRelationships.Add(contactHasManager);
-            }
-            dbContext.SaveChanges();
-        }
-
-        private void populateContacts()
+        private void PopulateContacts()
         {
             List <Contact> contacts = new List<Contact>();
 
@@ -74,7 +58,8 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Developer",
-                Picture = blankBytes
+                Picture = blankBytes,
+                ManagerId = 1
             });
             contacts.Add(new Contact {
                 FirstName = "Rob",
@@ -85,7 +70,8 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Consultant",
-                Picture = blankBytes
+                Picture = blankBytes,
+                ManagerId = 1
             });
             contacts.Add(new Contact {
                 FirstName = "Faye",
@@ -96,7 +82,8 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Developer",
-                Picture = blankBytes
+                Picture = blankBytes,
+                ManagerId = 1
             });
             contacts.Add(new Contact {
                 FirstName = "Lenny",
@@ -107,7 +94,8 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Consultant",
-                Picture = blankBytes
+                Picture = blankBytes,
+                ManagerId = 1
             });
 
             foreach (var contact in contacts)

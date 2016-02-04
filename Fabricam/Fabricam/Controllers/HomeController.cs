@@ -22,7 +22,39 @@ namespace Fabricam.Controllers
         {
             // Get all contacts
             List<Contact> contacts = contactUtilities.GetAllContacts();
-            return View(contacts);
+
+            //Build flat view model.
+            List<ContactViewModel> flatContacts = new List<ContactViewModel>();
+
+            foreach (var contact in contacts)
+            {
+                ContactViewModel flatContact = new ContactViewModel
+                {
+                    ContactId = contact.ContactId,
+                    DateOfBirth = contact.DateOfBirth,
+                    Email = contact.Email,
+                    FirstName = contact.FirstName,
+                    LastName = contact.LastName,
+                    JoinDate = contact.JoinDate,
+                    Organisation = contact.Organisation,
+                    Phone = contact.Phone,
+                    Title = contact.Title
+                };
+
+                if (contact.Manager == null)
+                {
+
+                }
+                else
+                {
+                    flatContact.ManagerFirstName = contact.Manager.FirstName;
+                    flatContact.ManagerLastName = contact.Manager.LastName;
+                }
+
+                flatContacts.Add(flatContact);
+            }
+
+            return View(flatContacts);
         }
 
         public ActionResult About()

@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using FabricamContactsDataAccess;
 
 namespace FabricamContactsBusinessLogic
@@ -57,8 +58,9 @@ namespace FabricamContactsBusinessLogic
         /// <param name="dateOfBirth"></param>
         /// <param name="dateJoined"></param>
         /// <param name="picture">Picture to store in database.</param>
+        /// <param name="managerId">The direct manager of this contact.</param>
         public bool CreateContact(string firstName, string lastName, string email, string phone, string organisation,
-            string title, DateTime dateOfBirth, DateTime dateJoined, Image picture = null)
+            string title, DateTime dateOfBirth, DateTime dateJoined, Image picture = null, int? managerId = null)
         {
             bool contactCreated = true;
 
@@ -73,7 +75,8 @@ namespace FabricamContactsBusinessLogic
                     Organisation = organisation,
                     Title = title,
                     DateOfBirth = dateOfBirth,
-                    JoinDate = dateJoined
+                    JoinDate = dateJoined,
+                    ManagerId = managerId
                 };
 
                 if (picture == null)
@@ -104,4 +107,6 @@ namespace FabricamContactsBusinessLogic
 
         
     }
+
+    
 }

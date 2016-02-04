@@ -22,7 +22,7 @@ namespace FabricamContactsDataAccess
 
         public IEnumerable<Contact> GetContacts()
         {
-            return context.Contacts.ToList();
+            return context.Contacts.Include(x => x.Manager).ToList();
         }
 
         public Contact GetContactById(int contactId)
