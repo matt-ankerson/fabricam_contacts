@@ -15,12 +15,14 @@ namespace FabricamContactsBusinessLogic
     /// </summary>
     public class ContactUtilities
     {
-        private IContactRepository contactRepository;
+        private readonly IContactRepository _contactRepository;
+        //private IContactRepository contactRepository;
 
-        public ContactUtilities()
+        public ContactUtilities(IContactRepository contactRepository)
         {
+            _contactRepository = contactRepository;
             // Create contact repository, hand in dbContext.
-            this.contactRepository = new ContactRepository(new FabricamContactsDbContext());
+            //this.contactRepository = new ContactRepository(new FabricamContactsDbContext());
         }
 
         /// <summary>
@@ -33,7 +35,7 @@ namespace FabricamContactsBusinessLogic
 
             try
             {
-                allContacts = contactRepository.GetContacts().OrderBy(x => x.LastName).ToList();
+                allContacts = _contactRepository.GetContacts().OrderBy(x => x.LastName).ToList();
             }
             catch (Exception)
             {
@@ -94,8 +96,8 @@ namespace FabricamContactsBusinessLogic
                 }
 
                 // Save
-                contactRepository.InsertContact(newContact);
-                contactRepository.Save();
+                _contactRepository.InsertContact(newContact);
+                _contactRepository.Save();
             }
             catch (Exception)
             {

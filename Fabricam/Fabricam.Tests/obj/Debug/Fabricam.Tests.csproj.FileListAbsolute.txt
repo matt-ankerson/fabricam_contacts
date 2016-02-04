@@ -107,3 +107,10 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.T
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\obj\Debug\Fabricam.Tests.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Moq.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Ninject.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Moq.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam.Tests\bin\Debug\Ninject.xml

@@ -15,7 +15,7 @@ namespace Fabricam.Controllers
 
         public HomeController()
         {
-            contactUtilities = new ContactUtilities();
+            contactUtilities = new ContactUtilities(new ContactRepository(new FabricamContactsDbContext()));
         }
 
         public ActionResult Index()

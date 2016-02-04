@@ -12,3 +12,9 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamCo
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\obj\Debug\FabricamContactsBusinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\obj\Debug\FabricamContactsBusinessLogic.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\obj\Debug\FabricamContactsBusinessLogic.pdb
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\Ninject.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\Ninject.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\Ninject.Web.Common.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\WebActivatorEx.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsBusinessLogic\bin\Debug\Ninject.Web.Common.xml

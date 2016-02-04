@@ -1,3 +1,4 @@
 ﻿$(document).ready(function () {
-    $('#example').DataTable();
+
+    var table = $('#contact-table').DataTable();
 });

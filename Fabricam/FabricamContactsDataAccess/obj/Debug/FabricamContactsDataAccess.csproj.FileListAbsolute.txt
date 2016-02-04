@@ -28,3 +28,9 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamCo
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\obj\Debug\FabricamContactsDataAccess.csprojResolveAssemblyReference.cache
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Ninject.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Ninject.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Ninject.Web.Common.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\WebActivatorEx.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\FabricamContactsDataAccess\bin\Debug\Ninject.Web.Common.xml
