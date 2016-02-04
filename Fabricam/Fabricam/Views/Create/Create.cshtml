@@ -1,0 +1,79 @@
+﻿@model List<FabricamContactsDataAccess.Contact>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<script src="../../Scripts/jquery-1.12.0.min.js"></script>
+<!-- JQuery UI for Datepickers -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="../../Scripts/datepickers.js"></script>
+<script src="../../Scripts/errorwindow.js"></script>
+
+@if (ViewBag.Message != null)
+{
+    <div class="row padding_top" id="admin_error_window">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="container well">
+                    @ViewBag.Message
+                    <button type="button" id="admin_error_window_close" class="btn btn-danger pull-right">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="container-fluid top-padding">
+        <div class="col-md-8 col-md-offset-2">
+            <form id="create-contact-form" action="/Create/CreateContact" method="post" enctype="multipart/form-data" role="form">
+                <h3>Add a new Contact</h3>
+                <label for="firstName-input">First name</label>
+                <input class="form-control" type="text" name="firstName" id="firstName-input"/>
+                <br/>
+                <label for="lastName-input">Last name</label>
+                <input class="form-control" type="text" name="lastName" id="lastName-input"/>
+                <br />
+                <label for="organisation-input">Organisation</label>
+                <input class="form-control" type="text" name="organisation" id="organisation-input"/>
+                <br />
+                <label for="title-input">Title</label>
+                <input class="form-control" type="text" name="title" id="title-input"/>
+                <br />
+                <label for="email-input">Email</label>
+                <input class="form-control" type="text" name="email" id="email-input"/>
+                <br />
+                <label for="phone-input">Phone</label>
+                <input class="form-control" type="text" name="phone" id="phone-input"/>
+                <br />
+                <label for="manager-input">Select manager</label>
+                <select class="form-control" id="manager-input" name="managerId">
+                    <option value="0">No manager</option>
+                    @foreach (var potentialManager in @Model)
+                    {
+                        <option value="@potentialManager.ContactId">@potentialManager.FirstName @potentialManager.LastName</option>
+                    }
+                </select>
+                <br />
+                <label for="picture-input">Upload profile picture</label>
+                <input class="form-control" type="file" name="picture" id="picture-input"/>
+                <br />
+                <label for="dateofbirth-datepicker">Date of birth <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></label>
+                <p>
+                    <input class="form-control" type="text" name="dateOfBirth" id="dateofbirth-datepicker">
+                </p>
+                <br />
+                <label for="datejoined-datepicker">Date joined <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></label>
+                <p>
+                    <input class="form-control" type="text" name="dateJoined" id="datejoined-datepicker">
+                </p>
+                <br />
+                <button id="create-contact-submit" type="submit" class="btn btn-info btn-block"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+

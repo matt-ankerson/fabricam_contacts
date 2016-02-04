@@ -16,13 +16,10 @@ namespace FabricamContactsBusinessLogic
     public class ContactUtilities
     {
         private readonly IContactRepository _contactRepository;
-        //private IContactRepository contactRepository;
 
         public ContactUtilities(IContactRepository contactRepository)
         {
             _contactRepository = contactRepository;
-            // Create contact repository, hand in dbContext.
-            //this.contactRepository = new ContactRepository(new FabricamContactsDbContext());
         }
 
         /// <summary>

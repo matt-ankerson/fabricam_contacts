@@ -11,17 +11,17 @@ namespace Fabricam.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private ContactUtilities contactUtilities;
+        private ContactUtilities _contactUtilities;
 
         public HomeController()
         {
-            contactUtilities = new ContactUtilities(new ContactRepository(new FabricamContactsDbContext()));
+            _contactUtilities = new ContactUtilities(new ContactRepository(new FabricamContactsDbContext()));
         }
 
         public ActionResult Index()
         {
             // Get all contacts
-            List<Contact> contacts = contactUtilities.GetAllContacts();
+            List<Contact> contacts = _contactUtilities.GetAllContacts();
 
             //Build flat view model.
             List<ContactViewModel> flatContacts = new List<ContactViewModel>();
@@ -57,18 +57,18 @@ namespace Fabricam.Controllers
             return View(flatContacts);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }
