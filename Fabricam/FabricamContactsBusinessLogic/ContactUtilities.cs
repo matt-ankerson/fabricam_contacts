@@ -78,25 +78,19 @@ namespace FabricamContactsBusinessLogic
                     ManagerId = managerId
                 };
 
-                if (picture == null)
-                {
-                    // Use anonymous image
-                    Image anonymousImage = Image.FromFile("Images/anon-user.png");
-                    byte[] anonymousBytes = ImageBytesConverter.ConvertImageToBytes(anonymousImage);
-                    newContact.Picture = anonymousBytes;
-                }
-                else
+                if (picture != null)
                 {
                     // Use provided image
                     byte[] imageBytes = ImageBytesConverter.ConvertImageToBytes(picture);
                     newContact.Picture = imageBytes;
                 }
+                
 
                 // Save
                 _contactRepository.InsertContact(newContact);
                 _contactRepository.Save();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
                 contactCreated = false;
             }

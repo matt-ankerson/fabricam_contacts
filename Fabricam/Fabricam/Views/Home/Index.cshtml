@@ -26,6 +26,7 @@
                     <th>Join Date</th>
                     <th>Date of Birth</th>
                     <th>Phone</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,6 +42,12 @@
                             <td>@contact.JoinDate.ToShortDateString()</td>
                             <td>@contact.DateOfBirth.ToShortDateString()</td>
                             <td>@contact.Phone</td>
+                            <td>
+                                <a href="/Inspect/Inspect" class="btn more-info-btn">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    View
+                                </a>
+                            </td>
                         </tr>
                     }            
                 </tbody>

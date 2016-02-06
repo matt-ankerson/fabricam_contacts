@@ -77,7 +77,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\anon-user.png" />
+    <Content Include="Images\anonuser.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -34,13 +34,14 @@ namespace Fabricam.Controllers
         {
             DateTime realDateOfBirth;
             DateTime realJoinDate;
-            int? realManagerID = null;
+            int? realManagerId = null;
+            Image realPicture = null;
 
             try
             {
                 try
                 {
-                    // Parse our date strings.
+                    // Try to parse our date strings.
                     realDateOfBirth = DateTime.Parse(dateOfBirth);
                     realJoinDate = DateTime.Parse(dateJoined);
                 }
@@ -49,32 +50,75 @@ namespace Fabricam.Controllers
                     throw new Exception("Invalid date/s supplied.");
                 }
 
+                // Validate other input data
+                if ((string.IsNullOrEmpty(firstName)) ||
+                    (string.IsNullOrEmpty(lastName)) ||
+                    (string.IsNullOrEmpty(organisation)) ||
+                    (string.IsNullOrEmpty(title)) || 
+                    (string.IsNullOrEmpty(email)) ||
+                    (string.IsNullOrEmpty(phone)))
+                {
+                    throw new Exception("Missing information. Please fill out all fields.");
+                }
+
+                if (!ValidateEmail(email))
+                {
+                    throw new Exception("Invalid email address supplied.");
+                }
+
                 if (Convert.ToInt16(managerId) != 0)
                 {
-                    realManagerID = Convert.ToInt16(managerId);
+                    realManagerId = Convert.ToInt16(managerId);
                 }
 
                 // Verify that the user selected a file, send contact to business logic layer.
                 if (picture != null && picture.ContentLength > 0)
                 {
-                    Image realPicture = Image.FromStream(picture.InputStream, true, true);
+                    realPicture = Image.FromStream(picture.InputStream, true, true);
+                }
 
-                    _contactUtilities.CreateContact(firstName, lastName, email, phone, organisation, title, realDateOfBirth,
-                        realJoinDate, realPicture, realManagerID);
+                if (_contactUtilities.CreateContact(firstName, lastName, email, phone, organisation, title,
+                    realDateOfBirth,
+                    realJoinDate, realPicture, realManagerId))
+                {
+                    // Insertion of new contact worked!
                 }
                 else
                 {
-                    _contactUtilities.CreateContact(firstName, lastName, email, phone, organisation, title, realDateOfBirth,
-                        realJoinDate, null, realManagerID);
+                    throw new Exception("Unable to insert new contact. Review information supplied.");
                 }
+
             }
             catch (Exception exception)
             {
+                // Get all contacts, for manager selection.
+                List<Contact> possibleManagers = _contactUtilities.GetAllContacts();
+
                 ViewBag.Message = exception.Message;
+
+                return View("Create", possibleManagers);
             }
 
-            // Redirect to 'ahow all' page.
+            // Redirect to 'show all' page.
             return RedirectToAction("Index", "Home");
+        }
+
+        /// <summary>
+        /// Ensure the supplied email address 'looks like' an email address.
+        /// </summary>
+        /// <remarks>
+        /// Emails are not used as keys in the database, so it is not necessary to enforce uniqueness.
+        /// </remarks>
+        /// <param name="email">Email to check.</param>
+        /// <returns>Valid or invalid email (boolean indicator)</returns>
+        private bool ValidateEmail(string email)
+        {
+            if (email.Contains("@"))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
