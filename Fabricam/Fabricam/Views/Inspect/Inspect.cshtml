@@ -1,0 +1,43 @@
+﻿@model Fabricam.Controllers.ContactViewModel
+
+@{
+    ViewBag.Title = "Inspect";
+}
+
+<script src="../../Scripts/jquery-1.12.0.min.js"></script>
+
+<div class="row">
+    <div class="container-fluid top-padding">
+        <div class="col-md-6 col-md-offset-1">
+            <!-- Verbose contact details go here. -->
+            <h3>@Model.FirstName @Model.LastName</h3>
+            <ul class="list-group">
+                <li class="list-group-item"><b>Organisation: </b>@Model.Organisation</li>
+                <li class="list-group-item"><b>Title: </b>@Model.Title</li>
+                <li class="list-group-item"><b>Manager: </b>@Model.ManagerFirstName @Model.ManagerLastName</li>
+                <li class="list-group-item"><b>Email: </b>@Model.Email</li>
+                <li class="list-group-item"><b>Phone: </b>@Model.Phone</li>
+                <li class="list-group-item"><b>Join Date: </b>@Model.JoinDate.ToShortDateString()</li>
+                <li class="list-group-item"><b>Date of Birth: </b>@Model.DateOfBirth.ToShortDateString()</li>
+            </ul>
+        </div>
+        <div class="col-md-5">
+            <!-- Image goes here. -->
+            <br/><br/><br/>
+            
+            @if (Model.Picture == null)
+            {
+                <img src='../../Content/anonuser.png' style="max-width:200px; max-height:200px;" alt="Contact Picture" />
+            }
+            else
+            {
+                var base64 = Convert.ToBase64String(Model.Picture);
+                var imgSrc = string.Format("data:image/png;base64,{0}", base64);
+
+                <img src='@imgSrc' style="max-width:250px; max-height:250px;" alt="Contact Picture" />
+            }
+            
+        </div>
+    </div>
+</div>
+

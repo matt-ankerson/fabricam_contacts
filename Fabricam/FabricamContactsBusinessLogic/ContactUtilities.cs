@@ -42,6 +42,18 @@ namespace FabricamContactsBusinessLogic
             return allContacts;
         }
 
+        public Contact GetContactById(int contactId)
+        {
+            try
+            {
+                return _contactRepository.GetContactById(contactId);
+            }
+            catch (Exception exception)
+            {   
+                throw exception;
+            }
+        }
+
         /// <summary>
         /// Create new contact.
         /// </summary>

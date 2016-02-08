@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -14,9 +15,9 @@ namespace Fabricam.Controllers
         public string Phone { get; set; }
         public string Organisation { get; set; }
         public string Title { get; set; }
-        public byte[] Picture { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime JoinDate { get; set; }
+        public byte[] Picture { get; set; }
         public string ManagerFirstName { get; set; }
         public string ManagerLastName { get; set; }
     }

@@ -32,10 +32,10 @@ namespace FabricamContactsDataAccess
             List <Contact> contacts = new List<Contact>();
 
             // Make a blank image.
-            Image blankImage = new Bitmap(100, 100);
-            MemoryStream ms = new MemoryStream();
-            blankImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            byte[] blankBytes = ms.ToArray();
+            //Image blankImage = new Bitmap(100, 100);
+            //MemoryStream ms = new MemoryStream();
+            //blankImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            //byte[] blankBytes = ms.ToArray();
 
             contacts.Add(new Contact
             {
@@ -47,7 +47,7 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Developer",
-                Picture = blankBytes
+                Picture = null
             });
             contacts.Add(new Contact {
                 FirstName = "Susan",
@@ -58,7 +58,7 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Developer",
-                Picture = blankBytes,
+                Picture = null,
                 ManagerId = 1
             });
             contacts.Add(new Contact {
@@ -70,7 +70,7 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Consultant",
-                Picture = blankBytes,
+                Picture = null,
                 ManagerId = 1
             });
             contacts.Add(new Contact {
@@ -82,7 +82,7 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Developer",
-                Picture = blankBytes,
+                Picture = null,
                 ManagerId = 1
             });
             contacts.Add(new Contact {
@@ -94,7 +94,7 @@ namespace FabricamContactsDataAccess
                 Organisation = "Contoso",
                 Phone = "123456",
                 Title = "Consultant",
-                Picture = blankBytes,
+                Picture = null,
                 ManagerId = 1
             });
 
