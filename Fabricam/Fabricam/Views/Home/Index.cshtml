@@ -5,11 +5,13 @@
 }
 
 <script src="../../Scripts/jquery-1.12.0.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/jqc-1.11.3,dt-1.10.10,r-2.0.0/datatables.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/jqc-1.11.3,dt-1.10.10,r-2.0.0/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css" />
 <script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/jqc-1.11.3,dt-1.10.10,r-2.0.0/datatables.min.js"></script>
 <script src="../../Scripts/DataTable.js"></script>
 <script src="../../Scripts/exporttocsv.js"></script>
-<script src="../../Scripts/inspectbtnhandler.js"></script>
+<script src="../../Scripts/deletebtnhandler.js"></script>
+
 
 <div class="row">
     <div class="container top-padding">
@@ -27,23 +29,30 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach (var contact in @Model)
-                    {
-                        <tr>
-                            <td>@contact.LastName</td>
-                            <td>@contact.FirstName</td>
-                            <td>@contact.Organisation</td>
-                            <td>@contact.Title</td>
-                            <td>@contact.ManagerFirstName @contact.ManagerLastName</td>
-                            <td>
-                                <!-- Open individual inspection when one of these links is pressed. -->
-                                <a href="/Inspect/Inspect/?contactId=@contact.ContactId" class="btn more-info-btn" id="@contact.ContactId">
-                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                    }            
+                @foreach (var contact in @Model)
+                {
+                    <tr>
+                        <td>@contact.LastName</td>
+                        <td>@contact.FirstName</td>
+                        <td>@contact.Organisation</td>
+                        <td>@contact.Title</td>
+                        <td>@contact.ManagerFirstName @contact.ManagerLastName</td>
+                        <td>
+                            <!-- Open individual inspection when one of these links is pressed. -->
+                            <a href="/Inspect/Inspect/?contactId=@contact.ContactId" class="btn">
+                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                            </a>
+                            <a href="/Edit/Edit/?contactId=@contact.ContactId" class="btn">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </a>
+                            <a href=""class="delete-contact-btn btn" id="@contact.ContactId">
+                                <input type="hidden" class="hidden-firstname" value="@contact.FirstName"/>
+                                <input type="hidden" class="hidden-lastname" value="@contact.LastName"/>
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
                 </tbody>
             </table>
         </div>
@@ -52,4 +61,32 @@
             <a href="#" download="export.csv" class="export btn btn-success">Export <span class="glyphicon glyphicon-export" aria-hidden="true"></span></a>
         </div>
     </div>
+</div>
+<!-- /row -->
+<div class="container-fluid">
+    <div class="row">
+        <!-- Modal -->
+        <div class="modal fade" id="delete-modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div id="main-modal-header" class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="modal-title" class="global_modal_header">Delete Contact</h4>
+                    </div>
+                    <!-- Modal Content -->
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <p>Are you sure you want to delete?</p>
+                        <button id="confirm-delete-btn" class="btn btn-success">Delete <span class="glyphicon glyphicon-check"></span></button>
+                    </div>
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /modal -->
+    </div>
+
 </div>

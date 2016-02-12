@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using FabricamContactsDataAccess;
 
 namespace Fabricam.Controllers
 {
@@ -18,7 +19,9 @@ namespace Fabricam.Controllers
         public DateTime DateOfBirth { get; set; }
         public DateTime JoinDate { get; set; }
         public byte[] Picture { get; set; }
+        public int ManagerId { get; set; }
         public string ManagerFirstName { get; set; }
         public string ManagerLastName { get; set; }
+        public List<Contact> PossibleManagers { get; set; }
     }
 }

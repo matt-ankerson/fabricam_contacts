@@ -1,0 +1,102 @@
+﻿@model Fabricam.Controllers.ContactViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<script src="../../Scripts/jquery-1.12.0.min.js"></script>
+<!-- JQuery UI for Datepickers -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css" />
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="../../Scripts/datepickers.js"></script>
+<script src="../../Scripts/errorwindow.js"></script>
+
+@if (ViewBag.Message != null)
+{
+    <div class="row top-padding" id="admin_error_window">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="container well">
+                    @ViewBag.Message
+                    <button type="button" id="admin_error_window_close" class="btn btn-danger pull-right">&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="container-fluid top-padding">
+        <div class="col-md-4 col-md-offset-1">
+            <!-- Image goes here. -->
+            <br /><br /><br />
+
+            @if (Model.Picture == null)
+            {
+                <img src='../../Content/anonuser.png' style="max-width:200px; max-height:200px;" alt="Contact Picture" />
+            }
+            else
+            {
+                var base64 = Convert.ToBase64String(Model.Picture);
+                var imgSrc = string.Format("data:image/png;base64,{0}", base64);
+
+                <img src='@imgSrc' style="max-width:250px; max-height:250px;" alt="Contact Picture" />
+            }
+
+        </div>
+        <div class="col-md-6">
+            <form id="edit-contact-form" action="/Edit/EditContact" method="post" enctype="multipart/form-data" role="form">
+                <h3>Update Contact</h3>
+                <input type="hidden" name="contactId" value="@Model.ContactId"/>
+                <label for="firstName-input">First name</label>
+                <input class="form-control" type="text" name="firstName" id="firstName-input" value="@Model.FirstName"/>
+                <br/>
+                <label for="lastName-input">Last name</label>
+                <input class="form-control" type="text" name="lastName" id="lastName-input" value="@Model.LastName"/>
+                <br/>
+                <label for="organisation-input">Organisation</label>
+                <input class="form-control" type="text" name="organisation" id="organisation-input" value="@Model.Organisation"/>
+                <br/>
+                <label for="title-input">Title</label>
+                <input class="form-control" type="text" name="title" id="title-input" value="@Model.Title"/>
+                <br/>
+                <label for="email-input">Email</label>
+                <input class="form-control" type="text" name="email" id="email-input" value="@Model.Email"/>
+                <br/>
+                <label for="phone-input">Phone</label>
+                <input class="form-control" type="text" name="phone" id="phone-input" value="@Model.Phone"/>
+                <br/>
+                <label for="manager-input">Select manager</label>
+                <select class="form-control" id="manager-input" name="managerId">
+                    @if (Model.ManagerId != 0)
+                    {
+                        <option value="@Model.ManagerId" selected="selected">@Model.ManagerFirstName @Model.ManagerLastName</option>
+                    }
+                    <option value="0">No manager</option>
+                    @foreach (var potentialManager in @Model.PossibleManagers)
+                    {
+                        <option value="@potentialManager.ContactId">@potentialManager.FirstName @potentialManager.LastName</option>
+                    }
+                </select>
+                <br/>
+                <label for="picture-input">Upload new Profile Picture</label>
+                <input class="form-control" type="file" name="Picture" id="picture-input"/>
+                <br/>
+                <label for="dateofbirth-datepicker">Date of birth <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></label>
+                <p>
+                    <input class="form-control" type="text" name="dateOfBirth" id="dateofbirth-datepicker" value="@Model.DateOfBirth.ToShortDateString()">
+                </p>
+                <br/>
+                <label for="datejoined-datepicker">Date joined <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></label>
+                <p>
+                    <input class="form-control" type="text" name="dateJoined" id="datejoined-datepicker" value="@Model.JoinDate.ToShortDateString()">
+                </p>
+                <br/>
+                <button id="edit-contact-submit" type="submit" class="btn btn-info"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+

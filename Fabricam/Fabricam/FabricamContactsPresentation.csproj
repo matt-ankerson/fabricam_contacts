@@ -219,6 +219,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CreateController.cs" />
+    <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InspectController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
@@ -251,7 +252,7 @@
     <Content Include="Scripts\datepickers.js" />
     <Content Include="Scripts\errorwindow.js" />
     <Content Include="Scripts\exporttocsv.js" />
-    <Content Include="Scripts\inspectbtnhandler.js" />
+    <Content Include="Scripts\deletebtnhandler.js" />
     <Content Include="Scripts\jquery-1.12.0.js" />
     <Content Include="Scripts\jquery-1.12.0.min.js" />
     <Content Include="Scripts\jquery-1.12.0.min.map" />
@@ -284,6 +285,7 @@
     <Content Include="Views\UserProfile\Relogin.cshtml" />
     <Content Include="Views\Create\Create.cshtml" />
     <Content Include="Views\Inspect\Inspect.cshtml" />
+    <Content Include="Views\Edit\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

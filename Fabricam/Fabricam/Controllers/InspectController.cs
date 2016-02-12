@@ -52,8 +52,6 @@ namespace Fabricam.Controllers
                 flatContact.Picture = contact.Picture;
             }
 
-            // Send image to view
-
             return View(flatContact);
         }
     }

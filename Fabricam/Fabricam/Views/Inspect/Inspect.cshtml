@@ -5,10 +5,28 @@
 }
 
 <script src="../../Scripts/jquery-1.12.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../Content/Site.css" />
 
 <div class="row">
     <div class="container-fluid top-padding">
-        <div class="col-md-6 col-md-offset-1">
+        <div class="col-md-4 col-md-offset-1">
+            <!-- Image goes here. -->
+            <br /><br /><br />
+
+            @if (Model.Picture == null)
+            {
+                <img src='../../Content/anonuser.png' style="max-width:200px; max-height:200px;" alt="Contact Picture" />
+            }
+            else
+            {
+                var base64 = Convert.ToBase64String(Model.Picture);
+                var imgSrc = string.Format("data:image/png;base64,{0}", base64);
+
+                <img src='@imgSrc' style="max-width:250px; max-height:250px;" alt="Contact Picture" />
+            }
+
+        </div>
+        <div class="col-md-6">
             <!-- Verbose contact details go here. -->
             <h3>@Model.FirstName @Model.LastName</h3>
             <ul class="list-group">
@@ -21,23 +39,7 @@
                 <li class="list-group-item"><b>Date of Birth: </b>@Model.DateOfBirth.ToShortDateString()</li>
             </ul>
         </div>
-        <div class="col-md-5">
-            <!-- Image goes here. -->
-            <br/><br/><br/>
-            
-            @if (Model.Picture == null)
-            {
-                <img src='../../Content/anonuser.png' style="max-width:200px; max-height:200px;" alt="Contact Picture" />
-            }
-            else
-            {
-                var base64 = Convert.ToBase64String(Model.Picture);
-                var imgSrc = string.Format("data:image/png;base64,{0}", base64);
 
-                <img src='@imgSrc' style="max-width:250px; max-height:250px;" alt="Contact Picture" />
-            }
-            
-        </div>
     </div>
 </div>
 

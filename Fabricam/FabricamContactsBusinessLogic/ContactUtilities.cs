@@ -55,6 +55,23 @@ namespace FabricamContactsBusinessLogic
         }
 
         /// <summary>
+        /// Get all contacts except one. Useful for getting all potential managers (A contact can't manage themselves).
+        /// </summary>
+        /// <param name="contactId">The contact to exclude from the list.</param>
+        /// <returns>List of contacts, excluding the indicated contact.</returns>
+        public List<Contact> GetAllContactsExceptOne(int contactId)
+        {
+            try
+            {
+                return _contactRepository.GetContacts().Where(x => x.ContactId != contactId).ToList();
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        } 
+
+        /// <summary>
         /// Create new contact.
         /// </summary>
         /// <remarks>
@@ -110,7 +127,94 @@ namespace FabricamContactsBusinessLogic
             return contactCreated;
         }
 
-        
+        public bool UpdateContact(int contactId, string firstName, string lastName, string email, string phone, string organisation,
+            string title, DateTime dateOfBirth, DateTime dateJoined, Image picture = null, int? managerId = null)
+        {
+            bool contactUpdated = true;
+
+            try
+            {
+                // Pull the old contact up, update fields.
+                Contact oldContact = _contactRepository.GetContactById(contactId);
+                oldContact.FirstName = firstName;
+                oldContact.LastName = lastName;
+                oldContact.Email = email;
+                oldContact.Phone = phone;
+                oldContact.Organisation = organisation;
+                oldContact.Title = title;
+                oldContact.DateOfBirth = dateOfBirth;
+                oldContact.JoinDate = dateJoined;
+                oldContact.ManagerId = managerId;
+
+                if (picture != null)
+                {
+                    // Use provided image
+                    byte[] imageBytes = ImageBytesConverter.ConvertImageToBytes(picture);
+                    oldContact.Picture = imageBytes;
+                }
+
+                _contactRepository.UpdateContact(oldContact);
+                _contactRepository.Save();
+            }
+            catch (Exception exception)
+            {
+                contactUpdated = false;
+            }
+
+            return contactUpdated;
+        }
+
+        /// <summary>
+        /// Delete an indicated contact.
+        /// </summary>
+        /// <param name="contactId">Indicates contact to delete.</param>
+        /// <returns>Boolean success indicator.</returns>
+        public bool DeleteContact(int contactId)
+        {
+            bool contactDeleted = true;
+
+            try
+            {
+                // Check that this contact doesn't 'manage' any other contacts.
+                if (_contactRepository.GetContacts().Select(x => x.ManagerId).ToList().Contains(contactId))
+                {
+                    // We can't delete this contact while it manages others.
+                    contactDeleted = false;
+                }
+                else
+                {
+                    _contactRepository.DeleteContact(contactId);
+                    _contactRepository.Save();
+                }
+                
+            }
+            catch (Exception)
+            {
+                contactDeleted = false;
+            }
+
+            return contactDeleted;
+        }
+
+        /// <summary>
+        /// Ensure the supplied email address 'looks like' an email address.
+        /// </summary>
+        /// <remarks>
+        /// Emails are not used as keys in the database, so it is not necessary to enforce uniqueness.
+        /// </remarks>
+        /// <param name="email">Email to check.</param>
+        /// <returns>Valid or invalid email (boolean indicator)</returns>
+        public bool ValidateEmail(string email)
+        {
+            if (email.Contains("@"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
     }
 
     

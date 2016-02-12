@@ -61,7 +61,7 @@ namespace Fabricam.Controllers
                     throw new Exception("Missing information. Please fill out all fields.");
                 }
 
-                if (!ValidateEmail(email))
+                if (!_contactUtilities.ValidateEmail(email))
                 {
                     throw new Exception("Invalid email address supplied.");
                 }
@@ -101,24 +101,6 @@ namespace Fabricam.Controllers
 
             // Redirect to 'show all' page.
             return RedirectToAction("Index", "Home");
-        }
-
-        /// <summary>
-        /// Ensure the supplied email address 'looks like' an email address.
-        /// </summary>
-        /// <remarks>
-        /// Emails are not used as keys in the database, so it is not necessary to enforce uniqueness.
-        /// </remarks>
-        /// <param name="email">Email to check.</param>
-        /// <returns>Valid or invalid email (boolean indicator)</returns>
-        private bool ValidateEmail(string email)
-        {
-            if (email.Contains("@"))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }

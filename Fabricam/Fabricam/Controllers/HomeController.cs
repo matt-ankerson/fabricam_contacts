@@ -57,18 +57,15 @@ namespace Fabricam.Controllers
             return View(flatContacts);
         }
 
-        //public ActionResult About()
-        //{
-        //    ViewBag.Message = "Your application description page.";
+        [HttpGet]
+        public JsonResult DeleteContact(string contactId)
+        {
+            if (_contactUtilities.DeleteContact(Convert.ToInt16(contactId)))
+            {
+                return Json("Success", JsonRequestBehavior.AllowGet);
+            }
 
-        //    return View();
-        //}
-
-        //public ActionResult Contact()
-        //{
-        //    ViewBag.Message = "Your contact page.";
-
-        //    return View();
-        //}
+            return Json("Failure", JsonRequestBehavior.DenyGet);
+        }
     }
 }

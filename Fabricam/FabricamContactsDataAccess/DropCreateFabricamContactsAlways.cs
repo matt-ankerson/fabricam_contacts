@@ -55,9 +55,9 @@ namespace FabricamContactsDataAccess
                 DateOfBirth = DateTime.Today,
                 Email = "sue@gmail.com",
                 JoinDate = DateTime.Today,
-                Organisation = "Contoso",
+                Organisation = "Pipes Inc.",
                 Phone = "123456",
-                Title = "Developer",
+                Title = "Plumber",
                 Picture = null,
                 ManagerId = 1
             });
@@ -67,9 +67,9 @@ namespace FabricamContactsDataAccess
                 DateOfBirth = DateTime.Today,
                 Email = "rob@gmail.com",
                 JoinDate = DateTime.Today,
-                Organisation = "Contoso",
+                Organisation = "Royal Mail",
                 Phone = "123456",
-                Title = "Consultant",
+                Title = "Mail Man",
                 Picture = null,
                 ManagerId = 1
             });
@@ -91,9 +91,9 @@ namespace FabricamContactsDataAccess
                 DateOfBirth = DateTime.Today,
                 Email = "lenny@gmail.com",
                 JoinDate = DateTime.Today,
-                Organisation = "Contoso",
+                Organisation = "BBC",
                 Phone = "123456",
-                Title = "Consultant",
+                Title = "Broadcaster",
                 Picture = null,
                 ManagerId = 1
             });
