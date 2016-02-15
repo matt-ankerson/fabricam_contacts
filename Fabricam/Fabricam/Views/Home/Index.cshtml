@@ -28,6 +28,16 @@
                     <th></th>
                 </tr>
                 </thead>
+                <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Organisation</th>
+                    <th>Title</th>
+                    <th>Manager</th>
+                    <th></th>
+                </tr>
+                </tfoot>
                 <tbody>
                 @foreach (var contact in @Model)
                 {
@@ -40,7 +50,7 @@
                         <td>
                             <!-- Open individual inspection when one of these links is pressed. -->
                             <a href="/Inspect/Inspect/?contactId=@contact.ContactId" class="btn">
-                                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                             </a>
                             <a href="/Edit/Edit/?contactId=@contact.ContactId" class="btn">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>

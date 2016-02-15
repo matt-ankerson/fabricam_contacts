@@ -40,7 +40,7 @@ namespace FabricamContactsDataAccess
                 JoinDate = DateTime.Today,
                 Organisation = "Contoso",
                 Phone = "123456",
-                Title = "Developer",
+                Title = "Consultant",
                 Picture = null
             });
             contacts.Add(new Contact {
@@ -75,7 +75,7 @@ namespace FabricamContactsDataAccess
                 JoinDate = new DateTime(2012, 4, 10),
                 Organisation = "Contoso",
                 Phone = "123456",
-                Title = "Developer",
+                Title = "Software Developer",
                 Picture = null,
                 ManagerId = 1
             });
@@ -90,6 +90,45 @@ namespace FabricamContactsDataAccess
                 Title = "Broadcaster",
                 Picture = null,
                 ManagerId = 1
+            });
+            contacts.Add(new Contact
+            {
+                FirstName = "Bruce",
+                LastName = "Joules",
+                DateOfBirth = new DateTime(1968, 3, 11),
+                Email = "bruce@gmail.com",
+                JoinDate = new DateTime(2004, 1, 3),
+                Organisation = "Fabricam",
+                Phone = "6542456",
+                Title = "Project Manager",
+                Picture = null,
+                ManagerId = 1
+            });
+            contacts.Add(new Contact
+            {
+                FirstName = "Raywyn",
+                LastName = "Ingles",
+                DateOfBirth = new DateTime(1970, 3, 1),
+                Email = "raywyn@gmail.com",
+                JoinDate = new DateTime(2006, 8, 3),
+                Organisation = "Fabricam",
+                Phone = "765432",
+                Title = "Accountant",
+                Picture = null,
+                ManagerId = 6
+            });
+            contacts.Add(new Contact
+            {
+                FirstName = "Mike",
+                LastName = "Weir",
+                DateOfBirth = new DateTime(1993, 2, 6),
+                Email = "mike@gmail.com",
+                JoinDate = new DateTime(2006, 8, 3),
+                Organisation = "Fabricam",
+                Phone = "0987654",
+                Title = "Software Developer",
+                Picture = null,
+                ManagerId = 6
             });
 
             foreach (var contact in contacts)

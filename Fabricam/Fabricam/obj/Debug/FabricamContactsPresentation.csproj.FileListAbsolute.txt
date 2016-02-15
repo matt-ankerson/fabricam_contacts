@@ -40,6 +40,9 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.Owin.Security.OpenIdConnect.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Newtonsoft.Json.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Common.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Mvc.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Owin.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Spatial.dll
@@ -50,6 +53,7 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.WebPages.Deployment.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.WebPages.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.WebPages.Razor.dll
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\WebActivatorEx.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\WebGrease.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsBusinessLogic.pdb
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\FabricamContactsDataAccess.pdb
@@ -59,6 +63,9 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.ApplicationInsights.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Common.xml
+C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Mvc.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.Helpers.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.Mvc.xml
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\System.Web.Optimization.xml
@@ -121,10 +128,3 @@ C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\b
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\FabricamContactsPresentation.csprojResolveAssemblyReference.cache
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.dll
 C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\obj\Debug\Fabricam.pdb
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Common.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Mvc.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\WebActivatorEx.dll
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.xml
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Common.xml
-C:\Users\MattA\Documents\training_projects\fabricam_contacts\Fabricam\Fabricam\bin\Ninject.Web.Mvc.xml
