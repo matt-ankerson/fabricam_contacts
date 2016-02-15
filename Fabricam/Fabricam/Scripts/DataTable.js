@@ -6,7 +6,8 @@
         responsive: true,
         initComplete: function() {
             this.api().columns().every(function() {
-                // Only for the fifth column.
+                // Only for the third, fourth and fifth column.
+                // Table is simple enough to afford this approach.
                 if ((colCount == 2) || (colCount == 3) || (colCount == 4)) {
                     var column = this;
                     var select = $('<select><option value="">No filter</option></select>')
