@@ -34,9 +34,9 @@ namespace FabricamContactsBusinessLogic
             {
                 allContacts = _contactRepository.GetContacts().OrderBy(x => x.LastName).ToList();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-                throw;
+                throw exception;
             }
 
             return allContacts;
